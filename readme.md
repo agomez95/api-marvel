@@ -8,16 +8,16 @@ $ npm i
 
 ## Importante
 
-* En windows para que pueda ser ejecutado el archivo .sh se debe ejecutar en un terminal *Git Bash* 
+* En windows para que pueda ser ejecutado el archivo .sh se debe ejecutar en un terminal *Git Bash* antes que el comando de ejecución del servidor
 
 ```bash
 # este es el comando que debe ser acompañado por un node o nodemon a su costado 
-$ bash ./scripts/enviromentVariables.sh
+$ source scripts/sh.sh
 ```
 * En MacOs seria así 
 ```bash
 # este es el comando que debe ser acompañado por un node o nodemon a su costado 
-$ . ./scripts/enviromentVariables.sh
+$ . ./scripts/sh.sh
 ```
 
 ## Ejecutar

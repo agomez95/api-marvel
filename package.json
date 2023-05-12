@@ -5,8 +5,8 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "local:bash": "(bash ./scripts/enviromentVariables.sh && nodemon src/server.js)",
-    "local:mac": "(. ./scripts/enviromentVariables.sh && nodemon src/server.js)"
+    "local:bash": "(bash scripts/env.sh && nodemon src/server.js)",
+    "local:mac": "(. ./scripts/env.sh && nodemon src/server.js)"
   },
   "author": "adrian",
   "license": "ISC",

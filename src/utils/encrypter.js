@@ -1,4 +1,3 @@
-require('dotenv').config();
 const md5 = require("crypto-js/md5");
 
 module.exports = (publicKey, privateKey) => {

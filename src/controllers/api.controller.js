@@ -6,7 +6,6 @@ const getHeroesController = async (req, res) => {
         res.status(200).json({
             err_code: 0,
             status: 200,
-            //...moduleResponse
             response: moduleResponse
         });
     } catch(error) {
