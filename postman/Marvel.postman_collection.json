@@ -1,0 +1,26 @@
+{
+	"info": {
+		"_postman_id": "a0162807-3134-4e85-bfc3-3199a005b7d7",
+		"name": "Marvel",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "GET - Heroes",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{host}}/heroes",
+					"host": [
+						"{{host}}"
+					],
+					"path": [
+						"heroes"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
