@@ -7,6 +7,17 @@
 	"item": [
 		{
 			"name": "GET - Heroes",
+			"event": [
+				{
+					"listen": "prerequest",
+					"script": {
+						"exec": [
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
 			"request": {
 				"method": "GET",
 				"header": [],
@@ -17,6 +28,53 @@
 					],
 					"path": [
 						"heroes"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GET - ENV",
+			"event": [
+				{
+					"listen": "prerequest",
+					"script": {
+						"exec": [
+							"const ts = Date.now().toString();\r",
+							"const merge = ts + environment.PRIVATEKEY + environment.APIKEY;\r",
+							"\r",
+							"var str_2 = request.data[\"timeStamp\"] + request.data[\"APIKEY\"];\r",
+							"console.log('str_2 = ' + str_2); \r",
+							"\r",
+							"const hash = CryptoJS.MD5(merge).toString();\r",
+							"pm.environment.set('timeStamp', ts); \r",
+							"pm.environment.set('hash', hash);"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{API}}characters?ts={{timeStamp}}&apikey={{APIKEY}}&hash={{hash}}",
+					"host": [
+						"{{API}}characters"
+					],
+					"query": [
+						{
+							"key": "ts",
+							"value": "{{timeStamp}}"
+						},
+						{
+							"key": "apikey",
+							"value": "{{APIKEY}}"
+						},
+						{
+							"key": "hash",
+							"value": "{{hash}}"
+						}
 					]
 				}
 			},
