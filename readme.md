@@ -37,5 +37,4 @@ $ npm run local:mac
 
 # GetHeroes:
 * http://localhost:3000/api/heroes
-
-
+<image src="https://raw.githubusercontent.com/agomez95/api-marvel/main/imgs/GET%20-%20Heroes.PNG" alt="GetHeroes">
